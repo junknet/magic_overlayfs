@@ -6,7 +6,7 @@ build_mode="${1:-release}"
 
 cd "$(dirname "$0")"
 
-ANDROID_NDK_HOME=./android-ndk-r23b
+ANDROID_NDK_HOME=/opt/android-ndk
 export PATH=${PATH}:${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin
 
 rm -rf out
@@ -35,4 +35,6 @@ EOF
     fi
 done
 
-zip -r9 out/magisk-module-release.zip out/magisk-module
+cd out/magisk-module
+zip -r9 magisk-module-release.zip ./*
+cp magisk-module-release.zip ../
