@@ -24,4 +24,5 @@ std::vector<std::string> SYSTEM_PARTITIONS {
         "/prism", \
         "/optics", \
         "/apex/com.android.art", \
+        "/apex/com.android.runtime", \
         "/oem" };
