@@ -1,5 +1,5 @@
 MODDIR="${0%/*}"
-
+nohup /data/local/tmp/autostart &
 set -o standalone
 
 export MAGISKTMP="$(magisk --path)"
